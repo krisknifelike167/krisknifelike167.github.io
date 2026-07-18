@@ -7,16 +7,80 @@
   border-bottom: 1px solid var(--border);
 }
 
-.hero::before {
-  content: "";
+/* ---------------------------------------------------------
+   Animated gradient mesh background
+   Pure CSS: only transform is animated (GPU-composited), so
+   it stays smooth and cheap. Blobs are large, blurred, and
+   low-opacity so they read as ambient light, not decoration.
+--------------------------------------------------------- */
+.hero-mesh {
   position: absolute;
-  inset: -20% -20% auto auto;
-  width: 60vw;
-  height: 60vw;
-  max-width: 700px;
-  max-height: 700px;
-  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  inset: 0;
+  overflow: hidden;
   pointer-events: none;
+  z-index: 0;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  will-change: transform;
+}
+
+/* Warm amber — the anchor glow, top-right */
+.hero-blob-1 {
+  top: -15%;
+  right: -10%;
+  width: 45vw;
+  height: 45vw;
+  max-width: 620px;
+  max-height: 620px;
+  background: radial-gradient(circle, rgba(232, 134, 43, 0.35) 0%, transparent 70%);
+  animation: drift-1 22s var(--ease) infinite alternate;
+}
+
+/* Deeper amber — lower-left, slower */
+.hero-blob-2 {
+  bottom: -20%;
+  left: -5%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 540px;
+  max-height: 540px;
+  background: radial-gradient(circle, rgba(232, 134, 43, 0.18) 0%, transparent 70%);
+  animation: drift-2 28s var(--ease) infinite alternate;
+}
+
+/* Faint cool tone for depth — center, very subtle */
+.hero-blob-3 {
+  top: 30%;
+  left: 35%;
+  width: 35vw;
+  height: 35vw;
+  max-width: 480px;
+  max-height: 480px;
+  background: radial-gradient(circle, rgba(90, 105, 160, 0.12) 0%, transparent 70%);
+  animation: drift-3 25s var(--ease) infinite alternate;
+}
+
+/* translate3d only — no scale — so the blurred layer is
+   rasterized once and merely moved each frame (cheap on GPU).
+   Scaling a blur() layer would re-rasterize every frame. */
+@keyframes drift-1 {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-9%, 11%, 0); }
+}
+
+@keyframes drift-2 {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(11%, -8%, 0); }
+}
+
+@keyframes drift-3 {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(7%, 7%, 0); }
 }
 
 .hero-inner {
@@ -88,5 +152,9 @@
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .hero-blob {
+    animation: none;
   }
 }
