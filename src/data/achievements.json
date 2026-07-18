@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Dean's List",
+    "description": "Recognized for academic performance in the Computer Science program.",
+    "date": "2026-01",
+    "category": "academic"
+  },
+  {
+    "title": "University Hackathon — Finalist",
+    "description": "Built a working prototype in 24 hours as part of a 3-person team, placing among the top 5 finalists.",
+    "date": "2025-10",
+    "category": "competitions"
+  },
+  {
+    "title": "Undergraduate Research Assistant",
+    "description": "Assisted with a research project in the CS department, contributing to data collection and analysis.",
+    "date": "2025-08",
+    "category": "research"
+  }
+]

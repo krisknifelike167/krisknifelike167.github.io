@@ -1,0 +1,37 @@
+.contact-lead {
+  color: var(--text-muted);
+  max-width: 50ch;
+  margin-bottom: var(--space-7);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-5) var(--space-6);
+  min-width: 220px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease),
+    background 0.3s var(--ease);
+}
+
+.contact-link span {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: var(--surface);
+}
