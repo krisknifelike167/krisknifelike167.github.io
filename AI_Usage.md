@@ -40,3 +40,17 @@ Also create:
 - A README.md stub with placeholders for project name, description, and live link
 
 Please explain each major decision briefly as you go (design choices, why a library is used, etc.) so I understand the codebase, since I'll need to keep extending it myself.
+
+## Session 1 — [18/07/2026]
+Prompt:
+
+I want to add polished scroll-based animations to the site, similar to what you'd see on awwwards.com-style portfolios. Please:
+
+1. Install and set up Framer Motion for scroll-triggered animations (or GSAP + ScrollTrigger if you think it's better suited — your call, but explain why).
+2. Add scroll-reveal animations to each section (Hero, About, Projects, Achievements, Contact) — elements should fade in and slide up slightly (20-30px) as they enter the viewport, with a slight stagger if there are multiple items (like project cards).
+3. Add a subtle parallax effect to the hero section background so it moves slightly slower than the scroll speed.
+4. Consider adding Lenis for smooth scrolling site-wide, if it doesn't conflict with the above.
+5. Keep animation duration and easing consistent across the site (define these as constants/config, not repeated inline) so it feels cohesive.
+6. Make sure animations don't block content from being visible if JavaScript fails to load or on slow connections — content should be visible by default, animation is progressive enhancement.
+
+Explain briefly what each library is doing so I understand how to add similar animations to new sections later.
