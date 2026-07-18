@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "A fast, animated personal portfolio built with Vite and React, deployed via GitHub Actions to GitHub Pages. Content is driven entirely by JSON data files so it's easy to extend without touching layout code.",
+    "tags": ["React", "Vite", "CSS", "GitHub Actions"],
+    "link": "https://github.com/Ashique-7/Ashique-7.github.io",
+    "date": "2026-07",
+    "featured": true
+  },
+  {
+    "title": "Sample Project Two",
+    "description": "Replace this with a real project. A short description of what it does, what problem it solves, and any interesting technical decisions you made along the way.",
+    "tags": ["Python", "APIs"],
+    "link": "https://github.com/Ashique-7",
+    "date": "2026-03",
+    "featured": true
+  },
+  {
+    "title": "Sample Project Three",
+    "description": "Another placeholder entry. Swap the title, description, tags, and link when you have a real project to showcase here.",
+    "tags": ["Java", "Data Structures"],
+    "link": "https://github.com/Ashique-7",
+    "date": "2025-11",
+    "featured": false
+  }
+]

@@ -1,0 +1,92 @@
+.hero {
+  min-height: 90svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20% -20% auto auto;
+  width: 60vw;
+  height: 60vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  margin-bottom: var(--space-5);
+}
+
+.hero-tagline {
+  max-width: 46ch;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  color: var(--text-muted);
+  margin-bottom: var(--space-7);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  padding: var(--space-4) var(--space-6);
+  border-radius: 999px;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px var(--accent-soft);
+}
+
+.hero-cta span {
+  transition: transform 0.3s var(--ease);
+}
+
+.hero-cta:hover span {
+  transform: translateX(4px);
+}
+
+/* Entrance animation */
+.hero-enter {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: hero-in 0.8s var(--ease) forwards;
+}
+
+.hero-enter-1 { animation-delay: 0.05s; }
+.hero-enter-2 { animation-delay: 0.15s; }
+.hero-enter-3 { animation-delay: 0.28s; }
+.hero-enter-4 { animation-delay: 0.4s; }
+
+@keyframes hero-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

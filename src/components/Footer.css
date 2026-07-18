@@ -1,0 +1,12 @@
+.footer {
+  padding: var(--space-6) 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
